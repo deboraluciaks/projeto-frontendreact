@@ -1,4 +1,5 @@
-import { Card, Dados } from './ProductCardStyle'
+import { Card, Dados, Text, ButtonCard } from './ProductCardStyle'
+import { TbShoppingCartPlus } from 'react-icons/tb';
 
 function ProductCard(props) {
 
@@ -9,14 +10,22 @@ function ProductCard(props) {
 
     return (
         <Card>
-            <img src={props.img} alt='img'/>
-            <Dados>
-                <p>{props.name}</p>
-                <p>{props.valor}</p>
-
+            <ButtonCard>
                 <button 
                 onClick={() => addCart({produto})}
-                >Adicionar ao carrinho</button>
+                ><TbShoppingCartPlus/>
+                </button>
+            </ButtonCard>
+            
+            <img src={props.img} alt='img'/>
+            <Dados>
+
+                <Text>
+                    <p>{props.name}</p>
+                    <p>R$ {props.valor},00</p>
+                </Text>
+
+
 
             </Dados>
         </Card>

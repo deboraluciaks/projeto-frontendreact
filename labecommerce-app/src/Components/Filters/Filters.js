@@ -24,7 +24,7 @@ function Filter(props) {
     return (
         
         <Filters>
-            <h1>Filters</h1>
+            <h1>Busca</h1>
             <Form>
                 <label>Valor mínimo:</label>
                 <input

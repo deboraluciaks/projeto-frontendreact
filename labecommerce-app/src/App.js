@@ -1,26 +1,36 @@
 import Filter from "./Components/Filters/Filters";
+import Header from "./Components/Header/Header";
 import Home from "./Components/ProductList/Home/Home";
 import Cart from "./Components/ShoppingCart/Cart/Cart";
 import styled from 'styled-components';
 import { meusProdutos } from './assents/productList';
 import React, { useState } from 'react';
 
-const AppStyle = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
 
-    @media (max-width: 1280px) {
+const AppStyle = styled.div`
+
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    background-image: url(https://wallpapercosmos.com/w/full/8/7/7/194290-3840x2160-desktop-4k-outer-space-wallpaper-photo.jpg);
+    background-size: 100%;
+
+    /* @media (max-width: 1280px) {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;     
-    }
+    } */
 `
 
-const Header = styled.header`
-    display: flex;
-    border: 1px solid #000;
-    padding: 20px;
+const Body = styled.div`
 
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    justify-items: center;
+    /* @media (max-width: 1280px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;     
+    } */
 `
+
 
 
 function App() {
@@ -36,8 +46,6 @@ function App() {
   const [searchFilter, setSearchFilter] = useState("")
 
   
-
-
   function addCart (produtoAdd){
 
     const item = cart.find((produto) => produto.id === produtoAdd.produto.id)
@@ -81,14 +89,14 @@ function App() {
     setAmount(amount - produtoRem.produto.value)
   }
 
-  console.log(cart)
+
   
   return (
-    <>
-      <Header>
-          <h1>Intergalática</h1>
-      </Header>
-      <AppStyle>
+    <AppStyle>
+      <Header
+        cart={cart}
+      />
+      <Body>
 
         <Filter
         meusProdutos={meusProdutos}
@@ -125,8 +133,7 @@ function App() {
 
 
         />
-        
-        <Cart
+        <Cart 
         meusProdutos={meusProdutos}
 
         amount={amount}
@@ -138,8 +145,10 @@ function App() {
         removeCart={removeCart}
 
         />
-      </AppStyle>
-    </>
+        
+        
+      </Body>
+    </AppStyle>
   );
 }
 

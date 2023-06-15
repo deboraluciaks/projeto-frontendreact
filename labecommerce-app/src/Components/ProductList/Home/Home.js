@@ -12,7 +12,14 @@ function Home(props) {
     const { maxFilter } = props
     const { addCart } = props
 
-    
+    // let counter = 0;
+    // for (let i = 0; i < meusProdutos.length; i++) {
+    //   if (meusProdutos[i].status === '0') counter++;
+    // }
+
+    var prdts = meusProdutos.length;
+
+
 
     const handleOrdem = (e) => {
         setOrdination(e.target.value)
@@ -20,9 +27,10 @@ function Home(props) {
 
 
     return (
-        <HomeStyle>
-            <Header>
-                <p>Quantidade de produtos: {meusProdutos.lenght}</p>
+      <HomeStyle>
+
+        <Header>
+                <p>Quantidade de produtos: {prdts}</p>
                 
                 <label>Ordenação:
                     <Select
@@ -41,10 +49,9 @@ function Home(props) {
                         </option>
                     </Select>
                 </label>
-            </Header>      
- 
+        </Header>   
 
-            <Container>
+        <Container>
                 
             {meusProdutos.sort((produtoA, produtoB) => {
               if(ordination === "Crescente" && produtoA.name < produtoB.name){
@@ -80,8 +87,10 @@ function Home(props) {
           })}
                 
 
-            </Container>
-        </HomeStyle>
+        </Container>
+
+
+      </HomeStyle>
     )
 }
 
