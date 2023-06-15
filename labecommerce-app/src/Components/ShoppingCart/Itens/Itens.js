@@ -1,4 +1,6 @@
 import { ItemStyle } from './ItensStyle'
+import { MdDeleteOutline } from 'react-icons/md';
+
 
 function Itens(props) {
 
@@ -10,11 +12,11 @@ function Itens(props) {
         <ul>
             <ItemStyle >
         
-                <p>{props.name}: {props.qtd}</p>
+                <p>{props.name} x {props.qtd}</p>
                         
                 <button
                     onClick={() => removeCart({produto})}
-                >Remover</button>
+                ><MdDeleteOutline/></button>
 
                 </ItemStyle>
     
