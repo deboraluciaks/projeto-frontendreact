@@ -10,10 +10,10 @@ function Cart(props) {
     return (
         <CartStyle>
             <h1>Carrinho</h1>
-            {cart.map((produto, index) => {
+            {cart.map((produto) => {
                 return (
                     <Itens 
-                        key={index}
+                        key={produto.id}
                         cart={cart}
                         produto={produto}
                         removeCart={removeCart}
@@ -25,7 +25,7 @@ function Cart(props) {
                 )
             })}
                        
-            <p>Valor total: R$ {amount},00 </p>
+            <p>Valor total: {amount.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} </p>
         </CartStyle>
     )
 }

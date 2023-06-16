@@ -9,15 +9,9 @@ import React, { useState } from 'react';
 
 const AppStyle = styled.div`
 
-    display: grid;
-    grid-template-rows: 1fr 4fr;
-    background-image: url(https://wallpapercosmos.com/w/full/8/7/7/194290-3840x2160-desktop-4k-outer-space-wallpaper-photo.jpg);
-    background-size: 100%;
+  background: url(https://files.passeidireto.com/b01708e0-243d-44ec-87b4-5edb687ae3b2/b01708e0-243d-44ec-87b4-5edb687ae3b2.jpeg);
+  background-size: cover;
 
-    /* @media (max-width: 1280px) {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;     
-    } */
 `
 
 const Body = styled.div`
@@ -25,10 +19,11 @@ const Body = styled.div`
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     justify-items: center;
-    /* @media (max-width: 1280px) {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;     
-    } */
+
+    @media (max-width: 1130px) {
+      display: flex;  
+    }
+
 `
 
 
@@ -45,7 +40,7 @@ function App() {
   const [maxFilter, setMaxFilter] = useState("")
   const [searchFilter, setSearchFilter] = useState("")
 
-  
+    
   function addCart (produtoAdd){
 
     const item = cart.find((produto) => produto.id === produtoAdd.produto.id)

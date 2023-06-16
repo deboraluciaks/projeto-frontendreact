@@ -6,19 +6,20 @@ import { IoMdCart } from 'react-icons/io';
 function Header(props) {
 
     const { cart } = props
-    const { showCart } = props
-    const { style } = props
+
     
 
     return (
         
         <Topo>
             
-            <img src={logo2}/>
+            <img src={logo2} alt='logo'/>
             <button type="button" ><IoMdCart/>
             {cart.map((produto) => {
                 return (
-                    <span>{produto.qtd}</span>
+                    <span
+                    key={produto.id}
+                    >{produto.qtd}</span>
                 )
             })}
             </button>

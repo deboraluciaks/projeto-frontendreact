@@ -5,19 +5,21 @@ export const Card = styled.div`
     grid-template-rows: 1fr 3fr 2fr;
     background-color: black;
     justify-content: center;
-    align-self: center;
     align-items: center;
-    margin: 20px;
+    margin: 10px;
     border: 1px solid #000;
     width: 250px;
-    height: 60vh;
     box-shadow: 3px 3px 20px white;
     border-radius: 10px;
-    
-
-    
+ 
     img{
         width: 200px;
+    }
+
+    @media (max-width: 1130px) {
+        img{
+            width: 150px;
+        }
     }
 
 `
@@ -29,7 +31,8 @@ export const Dados = styled.section`
     padding: 10px;
     justify-content: center;
     align-self: center;
-    
+
+
 
 `
 
@@ -44,6 +47,14 @@ export const ButtonCard = styled.div`
         border: none;
         border-radius: 5px;
     }
+    @media (max-width: 1130px) {
+        
+        button{
+            justify-self: center;
+        
+        }
+    }
+
 `
 
 export const Text = styled.section`
@@ -64,4 +75,12 @@ export const Text = styled.section`
         
     }
 
+    @media (max-width: 1130px) {
+        font-size: 12px;
+        p{
+            align-self: center;
+            padding: 5px;
+        
+        }
+    }
 `

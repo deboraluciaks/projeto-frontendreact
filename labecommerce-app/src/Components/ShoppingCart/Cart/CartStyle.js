@@ -7,7 +7,6 @@ export const CartStyle = styled.div`
     flex-direction: column;
     color: white;
     background-color: black;
-    width: 300px;
     height: 100vh;
     gap: 16px;
     padding: 16px;
@@ -15,5 +14,11 @@ export const CartStyle = styled.div`
     h1{
         font-size: 18px;
     }
+
+    @media (max-width: 980px) {
+        font-size: 14px;
+        
+    }
+    
 `
 

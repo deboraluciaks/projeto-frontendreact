@@ -5,17 +5,35 @@ export const HomeStyle = styled.div`
     flex-direction: column;
     padding: 16px;
     color: white;
-    height: 10px;
     align-items: center;
+    
+    @media (max-width: 980px) {
+        width: 50vw;
+    }
 
 `
 
-export const Header = styled.header`
+export const HeaderHome = styled.div`
     display: flex;
+    
 
     p{
         margin-right: 400px;
     }
+
+    @media (max-width: 1130px) {
+      font-size: 12px ;
+      margin: 5px;
+    }
+
+    @media (max-width: 980px) {
+        flex-wrap: wrap;
+        p{
+            margin-right:300px;
+        }
+    }
+
+    
 `
 export const Select = styled.select`
     width: 100px;
@@ -27,8 +45,16 @@ export const Select = styled.select`
 export const Container = styled.section`
     display: flex;
     align-self: center;
-    justify-self: center;
-    height: 100vh;
-    
+    flex-wrap: wrap;
+
+    @media (max-width: 1250px) {
+        justify-content: center;
+    }
+
+    @media (max-width: 980px) {
+        flex-direction: column;
+    }
+
+
 `
 
