@@ -39,4 +39,12 @@ export const Topo = styled.header`
     color: black;
   }
 
+  @media (max-width: 750px) {
+    justify-content: center;
+  }
+
+  @media (max-width: 480px) {
+    justify-content: center;
+  }
+
 `

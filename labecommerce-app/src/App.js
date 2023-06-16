@@ -24,6 +24,11 @@ const Body = styled.div`
       display: flex;  
     }
 
+    @media (max-width: 750px) {
+      display: flex;  
+      flex-direction: column;
+    }
+
 `
 
 
