@@ -1,5 +1,5 @@
 import ProductCard from "../ProductCard/ProductCard";
-import { HomeStyle, Header, Container, Select } from './HomeStyle'
+import { HomeStyle, HeaderHome, Container, Select } from './HomeStyle'
 import React, { useState } from 'react';
 
 function Home(props) {
@@ -12,24 +12,19 @@ function Home(props) {
     const { maxFilter } = props
     const { addCart } = props
 
-    // let counter = 0;
-    // for (let i = 0; i < meusProdutos.length; i++) {
-    //   if (meusProdutos[i].status === '0') counter++;
-    // }
-
     var prdts = meusProdutos.length;
-
 
 
     const handleOrdem = (e) => {
         setOrdination(e.target.value)
     }
 
+    
 
     return (
       <HomeStyle>
 
-        <Header>
+        <HeaderHome>
                 <p>Quantidade de produtos: {prdts}</p>
                 
                 <label>Ordenação:
@@ -49,7 +44,7 @@ function Home(props) {
                         </option>
                     </Select>
                 </label>
-        </Header>   
+        </HeaderHome>   
 
         <Container>
                 
@@ -64,25 +59,34 @@ function Home(props) {
               }).filter((produto) => {
                   return produto.name.toLowerCase().includes(searchFilter.toLowerCase());
                 })
-                .filter((produto) => {
-                      if (produto.value >= minFilter && produto.value <= maxFilter){
-                        return (produto.value >= minFilter && produto.value <= maxFilter)
+                  .filter((produto) => {
+                    
+                        if(maxFilter && minFilter){
+                          return produto.value <= maxFilter && produto.value >= minFilter
 
-                      } else{
-                        return produto
-                      }})
-                      .map((produto, index) => {
-                        return (
-                          <ProductCard
+                        } else if(maxFilter){
+                          return produto.value <= maxFilter
+                          
+                        }else if(minFilter){
+                          return produto.value >= minFilter
+                          
+                        }else{
+                          return produto
+                        }
 
-                          key={index}
-                          addCart={addCart}
-                          name={produto.name}
-                          valor={produto.value}
-                          img={produto.imageUrl}
-                          produto={produto}
+                      })
+                        .map((produto) => {
+                          return (
+                            <ProductCard
 
-                          />
+                            key={produto.id}
+                            addCart={addCart}
+                            name={produto.name}
+                            valor={produto.value}
+                            img={produto.imageUrl}
+                            produto={produto}
+
+                            />
                 );
           })}
                 

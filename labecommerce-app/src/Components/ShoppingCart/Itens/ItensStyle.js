@@ -7,7 +7,6 @@ export const ItemStyle = styled.div`
     align-items: center;
     box-shadow: rgba(255,255,255, 0.3) 0px 2px 4px 0px, rgba(255,255,255, 0.3) 0px 2px 16px 0px;
     border-radius: 5px;
-    width: 250px;
     padding: 10px;
     margin: 10px;
     
@@ -22,5 +21,18 @@ export const ItemStyle = styled.div`
         border: none;
         border-radius: 5px;
     }
+
+    @media (max-width: 980px) {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        justify-content: center;
+
+        button{
+            margin: 15px;
+            
+        }
+    }
+    
 
 `

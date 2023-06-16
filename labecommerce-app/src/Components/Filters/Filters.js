@@ -28,16 +28,16 @@ function Filter(props) {
             <Form>
                 <label>Valor mínimo:</label>
                 <input
-                // type="number"
-                placeholder="Valor mínimo"
+                type="number"
+                placeholder="mínimo"
                 onChange={handleMin}
                 value={minFilter}
                 />
 
                 <label>Valor máximo:</label>
                 <input
-                // type="number"
-                placeholder="Valor máximo"
+                type="number"
+                placeholder="máximo"
                 onChange={handleMax}
                 value={maxFilter}
                 />

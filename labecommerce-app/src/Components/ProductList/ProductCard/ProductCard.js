@@ -7,6 +7,7 @@ function ProductCard(props) {
     const { produto } = props
     const { addCart } = props
 
+    
 
     return (
         <Card>
@@ -22,7 +23,7 @@ function ProductCard(props) {
 
                 <Text>
                     <p>{props.name}</p>
-                    <p>R$ {props.valor},00</p>
+                    <p>{props.valor.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</p>
                 </Text>
 
 

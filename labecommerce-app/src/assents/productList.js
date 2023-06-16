@@ -16,6 +16,12 @@ export const meusProdutos = [
       name: "Viagem para Plutão",
       value: 130000.0,
       imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Pluto_in_True_Color_-_High-Res.jpg/1200px-Pluto_in_True_Color_-_High-Res.jpg"
+    },
+    {
+      id: 4,
+      name: "Viagem para Jupiter",
+      value: 90000.0,
+      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/PIA22946-Jupiter-RedSpot-JunoSpacecraft-20190212.jpg/640px-PIA22946-Jupiter-RedSpot-JunoSpacecraft-20190212.jpg"
     }
   ];
 
