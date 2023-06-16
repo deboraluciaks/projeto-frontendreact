@@ -11,6 +11,11 @@ export const HomeStyle = styled.div`
         width: 50vw;
     }
 
+    @media (max-width: 750px) {
+        align-self: center;
+    }
+
+
 `
 
 export const HeaderHome = styled.div`
@@ -33,7 +38,6 @@ export const HeaderHome = styled.div`
         }
     }
 
-    
 `
 export const Select = styled.select`
     width: 100px;
@@ -46,9 +50,11 @@ export const Container = styled.section`
     display: flex;
     align-self: center;
     flex-wrap: wrap;
+    justify-content: center;
 
     @media (max-width: 1250px) {
         justify-content: center;
+        align-self: center;
     }
 
     @media (max-width: 980px) {

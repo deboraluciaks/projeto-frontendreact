@@ -23,8 +23,34 @@ export const Filters = styled.div `
         width: 16vw;
     }
 
-    @media (max-width: 980px) {
-        width: 12vw;
+
+
+    @media (max-width: 750px) {
+      display: flex;  
+      flex-direction: row;
+      height: 100px;
+      align-self: center;
+      border-radius: 0;
+      width: 80vw;
+      margin: 0;
+
+      h1{
+        justify-content: center;
+        margin: 0;
+        align-self: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      margin: 0;
+      padding: 0;
+      align-self: center;
+      width: 90vw;
+  
+
+      h1{
+        justify-content: center;
+      }
     }
 
 `
@@ -32,13 +58,31 @@ export const Filters = styled.div `
 export const Form = styled.form `
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    margin: 0;
     padding: 10px;
     gap: 10px;
     width: 70%;
 
-    @media (max-width: 980px) {
-        margin: 5px;
-        padding: 4px;
+    @media (max-width: 750px) {
+        flex-direction: row;
+        height: 30px;
+        padding: 15px;
+        width: 80%;
+        align-self: center;
+
+        input{
+          width: 70%
+        }
+    }
+
+    @media (max-width: 480px) {
+      margin-right: 10px;
+      padding: 0;
+      align-self: center;
+      width: 80%;
+
+      input{
+        width: 70%
+      }
     }
 `

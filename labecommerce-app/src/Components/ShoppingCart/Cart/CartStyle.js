@@ -19,6 +19,12 @@ export const CartStyle = styled.div`
         font-size: 14px;
         
     }
+
+    @media (max-width: 750px) {
+        display: flex;
+        height: 100%;
+        justify-content: center;
+    }
     
 `
 
